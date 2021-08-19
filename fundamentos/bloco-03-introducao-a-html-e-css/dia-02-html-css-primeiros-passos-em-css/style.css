@@ -1,0 +1,27 @@
+<style>
+        body{
+            font-size: 16px;
+            line-height: 25px;
+        }
+        h1{
+           font-size: 65px;
+           color: orange;
+           font-family: Helvetica, sans-serif; 
+        }
+        .corDeFundo{
+            background-color: rgb(241, 237, 210);
+        }
+        p{
+            font-weight: 600;
+            font-size: 3em;
+        }
+        #amarelo{
+            background-color: rgb(248, 223, 0);
+            }
+        #vermelho{
+            background-color: red;
+        }
+        #marrom{
+            background-color: rgb(94, 47, 4);
+        }
+    </style>
