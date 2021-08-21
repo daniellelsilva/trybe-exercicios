@@ -1,0 +1,7 @@
+div:hover{
+    border: 1px solid rgb(94, 172, 94);
+}
+
+div:nth-child(odd){
+    font-style: italic;
+}
