@@ -7,7 +7,7 @@ body{
 h1, h2, h3, h4{
     font-family: 'Anton', sans-serif;
     font-weight: lighter;
-    height: 50px;
+    line-height: 50px;
 }
 
 h1{
@@ -45,6 +45,10 @@ ul li{
     display: inline;
     padding: 10%;
     font-weight: bold;    
+}
+
+footer{
+    line-height: 90px;
 }
     
 
