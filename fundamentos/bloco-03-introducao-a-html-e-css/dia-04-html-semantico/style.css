@@ -1,0 +1,58 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    margin-left: 100px;
+}
+
+h1, h2, h3, h4{
+    font-family: 'Anton', sans-serif;
+    font-weight: lighter;
+    height: 50px;
+}
+
+h1{
+    text-align: center;
+    background-color: cadetblue;
+    height: 60px;
+    }
+
+h3{
+    margin-left: 50px;
+}
+
+h4{
+    margin-left: 100px;
+}
+
+.paragrafoInformativo{
+    margin-left: 100px;
+}
+
+img{
+    margin-left: 100px;
+}
+
+.referencia{
+    margin-left: 50px;
+}
+
+ul li{
+    list-style: none;
+    }
+
+.navegacao{
+    text-align: center;
+    display: inline;
+    padding: 10%;
+    font-weight: bold;    
+}
+    
+
+.tabela{
+    text-align: center;
+    margin-left: 100px;
+}
+.tituloTabela{
+    background-color: cadetblue;
+}
+
