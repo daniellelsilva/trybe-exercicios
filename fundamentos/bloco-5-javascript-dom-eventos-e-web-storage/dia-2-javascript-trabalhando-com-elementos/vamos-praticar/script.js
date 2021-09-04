@@ -23,3 +23,25 @@ document.querySelector('#elementoOndeVoceEsta').nextElementSibling;
 
 // EXercicio 08 parte 1;
 document.querySelector('#pai').lastChild.previousElementSibling;
+
+
+// Exercicio 01 parte 02;
+let criaIrmão = document.querySelector('#pai');
+let criandoImrão = document.createElement('section');
+criandoImrão.id = 'irmãoDoElementoOndeVoceEsta';
+criaIrmão.appendChild(criandoImrão);
+
+// Exercicio 02 parte 02;
+let criarFilho = document.querySelector('#elementoOndeVoceEsta');
+let criandoFilho = document.createElement('section');
+criandoFilho.id = 'FilhoDoElementoOndeVoceEsta';
+criarFilho.appendChild(criandoFilho);
+
+// Exercicio 03 parte 02;
+let criarFilhoDoFilho = document.querySelector('#primeiroFilhoDoFilho');
+let criandoFilhoDoFilho = document.createElement('section');
+criandoFilhoDoFilho.id = 'FilhoDoPrimeiroFilhoDoFilho';
+criarFilhoDoFilho.appendChild(criandoFilhoDoFilho)
+
+// Exercicio 04 parte 02;
+document.querySelector('#FilhoDoPrimeiroFilhoDoFilho').parentElement.parentElement.nextElementSibling;
