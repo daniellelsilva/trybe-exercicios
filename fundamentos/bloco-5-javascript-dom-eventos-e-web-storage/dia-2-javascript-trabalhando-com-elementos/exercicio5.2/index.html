@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+    // Requisito 1
+      let criarH1 = document.createElement('h1');
+      criarH1.innerText = 'Exercício 5.2 - JavaScript DOM';
+      document.body.appendChild(criarH1);
+
+    //Requisito 2
+        let criarMain = document.createElement('main');
+        criarMain.className = 'main-content';
+        document.body.appendChild(criarMain);
+
+    // Requisito 3 
+        let criarSection = document.createElement('section');
+        criarSection.className = 'center-content';
+        criarMain.appendChild(criarSection);
+
+    // Requisito 4
+        let criarP = document.createElement('p');
+        criarP.innerText = 'criando tag p';
+        criarSection.appendChild(criarP);
+
+    // Requisito 5
+        let leftContent = document.createElement('section');
+        leftContent.className = 'left-content';
+        criarMain.appendChild(leftContent);
+    // Requisito 6
+        let rigthContent = document.createElement('section');
+        rigthContent.className = 'rigth-content';
+        criarMain.appendChild(rigthContent);
+
+    // Requisito 7
+        let criaImagem = document.createElement('img');
+        criaImagem.className = 'small-image';
+        criaImagem.src = 'https://picsum.photos/200';
+        leftContent.appendChild(criaImagem);
+
+    // Requisito 8
+        let criaLista = document.createElement('ul');
+        rigthContent.appendChild(criaLista);
+        let arrayNumeros = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+        for(let numeros in arrayNumeros){
+            let criaLi = document.createElement('li');
+            criaLi.innerHTML = arrayNumeros[numeros];
+            criaLista.appendChild(criaLi);
+        };
+
+    // Requisito 9
+        for (let index = 0; index <= 2; index += 1) {
+            let criaH3= document.createElement('h3');
+            criarMain.appendChild(criaH3);
+        }
+    
+    // PARTE 2
+    </script>
+  </body>
+</html>
