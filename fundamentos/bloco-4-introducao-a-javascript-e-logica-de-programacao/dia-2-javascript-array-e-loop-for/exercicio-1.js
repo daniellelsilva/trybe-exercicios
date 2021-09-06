@@ -6,8 +6,8 @@ let valoresImpares = 0;
 let menorNumero = numbers[0];
 
 // Exercicio 1
-for (let number of numbers){
-    console.log("Exercicio 1: ", number);
+for (let index = 0; index < numbers.length; index += 1) {
+    console.log("Exercicio 1: " + numbers[index]);
 }
 
 // Exercicio 2
