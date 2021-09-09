@@ -32,7 +32,7 @@ function trocTexto (event) {
 // redirecione para alguma página;
 // 4.1. Que tal redirecionar para seu portifólio?
 function clickDuplo (event) {
-    window.location.replace('https://developer.mozilla.org/en-US/docs/Web/API/Element/dblclick_event');
+    window.location.href  = 'https://developer.mozilla.org/en-US/docs/Web/API/Element/dblclick_event';
 };
 myWebpage.addEventListener('dblclick', clickDuplo)
 
