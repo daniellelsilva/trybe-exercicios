@@ -95,13 +95,26 @@ function coresSexta () {
 })
 };
 coresSexta();
-// fazer caminho para o botao
-// fazer caminho para os dias?
 
-// implementar função
 
-// quando clciar deve mudar a cor
+// Exercicio 6
 
+  function zoomIn () {
+    // let declarada linha 20
+    listaUl.addEventListener('mouseover', function (event) {
+      event.target.style.fontSize = '30px';
+      event.target.style.fontWeight = '600';
+    })
+  };
+zoomIn();
+
+  function zoomOut () {
+    listaUl.addEventListener('mouseout', function(event){
+      event.target.style.fontSize = '20px';
+      event.target.style.fontWeight = '200';
+    })
+  };
+zoomOut();
 
 
  
