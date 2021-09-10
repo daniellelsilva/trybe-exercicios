@@ -117,6 +117,17 @@ zoomIn();
 zoomOut();
 
 
+// Exercicio 7
+ 
+  function adicionaTarfa (string) {
+    let myTasks = document.querySelector('.my-tasks');
+    let novasTarefa = document.createElement('span');
+    novasTarefa.innerHTML = string
+    myTasks.appendChild(novasTarefa);
+    
+  };
+
+  adicionaTarfa('PROJETO');
  
   
 
