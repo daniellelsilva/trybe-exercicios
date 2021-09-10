@@ -47,7 +47,7 @@ function botaoFeriado (string) {
 botaoFeriado('Feriado');
 
 // EXercicio 3
-function teste () {  
+function coresFeriado () {  
   let buttonFeriado = document.querySelector('#btn-holiday'); 
   let diasFeriado = document.querySelectorAll('.holiday');
   let antigaCor = 'rgb(238,238,238)';
@@ -64,7 +64,21 @@ function teste () {
 
   })
 };
-teste();
+coresFeriado();
+
+// EXercicio 4
+  // criar o botão
+function botaoSextaFeira (string) {
+  let containerButton = document.querySelector('.buttons-container');
+  let buttonFriday = document.createElement('button');
+  buttonFriday.innerText = string;
+  containerButton.appendChild(buttonFriday);
+  buttonFriday.id = 'btn-friday';
+}
+botaoSextaFeira('Sexta-feira');
+
+// Exercicio 5
+
 
 
 
