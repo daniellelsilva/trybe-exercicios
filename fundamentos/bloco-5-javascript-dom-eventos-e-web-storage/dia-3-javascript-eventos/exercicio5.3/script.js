@@ -138,10 +138,38 @@ zoomOut();
   function adicionaFundoTarefa (cor) {
     let myTasks = document.querySelector('.my-tasks');
     let fundoTarefa = document.createElement('div');
-
+    fundoTarefa.className = 'task';
     fundoTarefa.style.backgroundColor = cor;
     myTasks.appendChild(fundoTarefa);
   }
   adicionaFundoTarefa('red');
 
+  // Exercicio 9
+  // função com EVENTO
+  // CLICK na div cor 
+  // atribuir classe TASK SELECTED quando selecionada
+  // novo CLICK a classe volta a ser TASK
+  function selecionaTask() {
+    let tagDiv = document.querySelector('.task');
+    
+    tagDiv.addEventListener('click', function(event) {
+      
+      event.target.className = 'taskSelected';
+    })
+  }
+  selecionaTask();
 
+  // function setTaskClass() {
+  //   let selectedTask = document.getElementsByClassName('task selected');
+  //   let myTasks = document.querySelector('.task');
+  
+  //   myTasks.addEventListener('click', function(event) {
+  //     if (selectedTask.length === 0) {
+  //       event.target.className = 'task selected';
+  //     } else {
+  //       event.target.className = 'task';
+  //     }
+  //   });
+  // };
+  
+  // setTaskClass();
