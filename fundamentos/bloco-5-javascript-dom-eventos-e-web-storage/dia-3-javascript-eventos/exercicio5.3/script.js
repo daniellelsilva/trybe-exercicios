@@ -129,5 +129,19 @@ zoomOut();
 
   adicionaTarfa('PROJETO');
  
-  
+
+  // Exercicio 8
+  //  recebe cor
+  // cria tag div dinamicamente
+  // filho da classe my-tasks
+  // deve adicionar cor de fundo
+  function adicionaFundoTarefa (cor) {
+    let myTasks = document.querySelector('.my-tasks');
+    let fundoTarefa = document.createElement('div');
+
+    fundoTarefa.style.backgroundColor = cor;
+    myTasks.appendChild(fundoTarefa);
+  }
+  adicionaFundoTarefa('red');
+
 
