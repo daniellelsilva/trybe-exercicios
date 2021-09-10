@@ -78,7 +78,29 @@ function botaoSextaFeira (string) {
 botaoSextaFeira('Sexta-feira');
 
 // Exercicio 5
+function coresSexta () {
+  let buttonSexta = document.querySelector('#btn-friday');
+  let diasSexta = document.querySelectorAll('.friday');
+  let backgroundColor = 'rgb(238,238,238)';
+  let novaCor = 'blue';
+  // quando o click ocorrer, o for sera percorrido, por isso do evento "ouvinte" ficar aqui
+  buttonSexta.addEventListener('click', function() { 
+    for (let index = 0; index < diasSexta.length; index += 1) {
+    if (diasSexta[index].style.backgroundColor === novaCor) {
+      diasSexta[index].style.backgroundColor = backgroundColor;
+    } else {
+      diasSexta[index].style.backgroundColor = novaCor;
+    }
+  }
+})
+};
+coresSexta();
+// fazer caminho para o botao
+// fazer caminho para os dias?
 
+// implementar função
+
+// quando clciar deve mudar a cor
 
 
 
