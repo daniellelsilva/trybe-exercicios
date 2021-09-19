@@ -46,15 +46,15 @@ window.onload = function () {
 
     // 05 - Tipo de fonte (font family)
         // chamar o botão
-        let mudaFonte = document.querySelector('#font-family');
-        // adicionar evento ouvinte para quando ocorrer mudança
-        mudaFonte.addEventListener('change', function() {
-            let mudandoFonte= mudaFonte.selectedOptions[0];
-            texto.style.fontFamily = mudandoFonte.value;
+        let mudaFonte = document.getElementById('font-family');
+        
+        mudaFonte.addEventListener('change', function(){
+            let retornaFonte = mudaFonte.selectedOptions[0];
+            texto.style.fontFamily = retornaFonte.value;
+            localStorage.setItem('5.4-muda-fonte', retornaFonte.value)
         })
-        // salvar no localStorage
-
-
+        
+        
 
     // 06 -As preferencias devem ser salvas;
     let salvaBackgorund = localStorage.getItem('5.4-muda-cor-do-fundo');
@@ -65,3 +65,9 @@ window.onload = function () {
 
     let salvaFontSize = localStorage.getItem('5.4-muda-tamanho-fonte');
     texto.style.fontSize = salvaFontSize;
+
+    let salvaLineHeight = localStorage.getItem('5.4-muda-espacamento-linhas');
+    texto.style.lineHeight = salvaLineHeight;
+
+    let salvaFontFamily = localStorage.getItem('5.4-muda-fonte');
+    texto.style.fontFamily = salvaFontFamily;
