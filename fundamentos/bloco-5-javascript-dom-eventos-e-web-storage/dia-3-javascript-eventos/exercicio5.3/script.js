@@ -149,27 +149,45 @@ zoomOut();
   // CLICK na div cor 
   // atribuir classe TASK SELECTED quando selecionada
   // novo CLICK a classe volta a ser TASK
-  function selecionaTask() {
-    let tagDiv = document.querySelector('.task');
-    
-    tagDiv.addEventListener('click', function(event) {
-      
-      event.target.className = 'taskSelected';
-    })
-  }
-  selecionaTask();
 
-  // function setTaskClass() {
-  //   let selectedTask = document.getElementsByClassName('task selected');
-  //   let myTasks = document.querySelector('.task');
-  
-  //   myTasks.addEventListener('click', function(event) {
-  //     if (selectedTask.length === 0) {
-  //       event.target.className = 'task selected';
-  //     } else {
-  //       event.target.className = 'task';
-  //     }
-  //   });
-  // };
-  
-  // setTaskClass();
+  function addSelected () {
+  const classTask = document.querySelector('.task')
+  const addClassSelected = document.getElementsByClassName('task selected')
+
+  classTask.addEventListener('click', function(event){
+    if (addClassSelected.length === 0) {
+      event.target.className = 'task selected'
+    } else {
+      event.target.className = 'task';
+    }
+  });
+};
+addSelected(); 
+
+// Exercicio 10
+
+// classe dos dias = days
+// atribuir cor do item da lista quando clicar no dia
+// quando clicar novamente a cor deve voltar ao normal
+
+// os dias, pegar a task selected, background color task selected
+
+function changeDayColor() {
+  let classTaskSelected = document.getElementsByClassName('task selected');
+  let days = document.querySelector('#days');
+  let divTask = document.querySelector('.task');
+  let divColor = divTask.style.backgroundColor;
+
+  days.addEventListener('click', function(event){
+    let daysColor = event.target.style.color;
+    if(classTaskSelected.length > 0 && daysColor !== divColor) {
+      let color = classTaskSelected[0].style.backgroundColor;
+      event.target.style.color = color;
+    } else if(daysColor === divColor && classTaskSelected.length !== 0) {
+      event.target.style.color = 'rgb(119,119,119)';
+    }
+  });
+};
+
+changeDayColor();
+
