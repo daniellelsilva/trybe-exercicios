@@ -9,6 +9,7 @@ html {
   body {
     margin: 5%;
     font-family: 'Roboto', sans-serif;
+    background-color: rgb(234, 234, 234);
   }
   
   header p {
@@ -42,6 +43,7 @@ html {
   body {
     margin: 7%;
     font-family: 'Roboto', sans-serif;
+    background-color: rgb(237, 242, 251);
   }
 
   header p {
@@ -71,5 +73,44 @@ html {
 
   .main-content p {
     font-size: 1.0em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    background-color: rgb(246, 255, 248);
+    font-family: 'Roboto', sans-serif;
+    width: 80%;    
+  }
+
+  header p {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 800;
+  }
+  
+  nav {
+    display: flex;
+    font-size: 14px;
+  }
+  
+  .aside-one {
+    font-size: 1.0em;
+    line-height: 20px;
+  }
+
+  .aside-two, footer {
+    font-size: 0.8em;
+    margin-top: 30px;
+  }
+
+  .chapterTitle {
+    font-size: 1.1em;
+    margin-top: 40px;
+  }
+
+  .main-content p {
+    font-size: 1.1em;
+    line-height: 25px;
   }
 }
