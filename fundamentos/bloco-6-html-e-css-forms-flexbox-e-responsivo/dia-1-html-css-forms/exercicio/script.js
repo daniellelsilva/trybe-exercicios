@@ -50,14 +50,6 @@ function validateCity () {
   }
 }
 
-// validação tipo de imóvel
-// function validateHouseType () {
-//   let houseType = document.querySelector(`[name=${houseType}]:checked`);
-//   if (checked === null) {
-//     alert('Tipo de imóvel inválido');
-//   }
-// }
-
 // validação resumo curriculo
 function validateResume () {
   let resume = document.querySelector('[name = resume]');
@@ -74,6 +66,41 @@ function validateRole () {
   }
 }
 
+// validação descrição do cargo
+function validateRoleDescription () {
+  let roleDescription = document.querySelector('[name = roleDescription]');
+  if (roleDescription.value.length > 500 || roleDescription.value.length === 0) {
+    alert('Descrição de cargo inválida');
+  }
+}
+
+// validação de data
+function validateDate() {
+  let startDate = document.querySelector('.input-data').value;
+  stringDate = startDate.split("/");
+  console.log(stringDate);
+
+  let day = stringDate[0];
+  let month = stringDate[1];
+  let year = stringDate[2];
+
+  if(day < 1 || day > 31) {
+    alert('Dia inválido');
+  } else if (month < 1 || month > 12) {
+    alert('Mês inválido');
+  } else if (year < 0) {
+    alert('Ano inválido');
+  } 
+}
+
+// salva infor em divs
+// function saveDivs() {
+//   const inputs = document.querySelectorAll('input');
+//   for (let index = 0; index < inputs.length; index += 1) {
+//     if (inputs[index])
+//   }
+// }
+
 function submit(event) {
   event.preventDefault();
 
@@ -82,9 +109,10 @@ function submit(event) {
   validateCpf();
   validateAddress();
   validateCity();
-  validateHouseType();
   validateResume();
   validateRole();
+  validateRoleDescription();
+  validateDate();
 }
 
 
