@@ -9,7 +9,7 @@ const factorial = numero => {
 
 console.log(factorial(5));
 
-// EXercicio 2
+// // EXercicio 2
 
 let biggestWord = (phrase) => {
   let splitPhrase = phrase.split(' ');
@@ -30,7 +30,28 @@ console.log(biggestWord('Antonio foi no banheiro e não sabemos o que aconteceu'
 // EXercicio 3 nos arquivos 'index.html' e 'script.js'
 
 // Exercicio 4
-function reciveString (string) {
-  const letter = 'x';
-  const word = 'darkside';
-}
+
+
+  const arr = ['Soft Skills', 'CSS', 'HTML', 'JavaScript', 'DOM'];
+
+  const firstFunction = (string) => {
+    let initialPhrase = `Tryber ${string} aqui \n Essas são minhas habilidades`
+    return initialPhrase;
+  }
+
+  let result = `${firstFunction('Dani')}`
+  
+
+
+  const secondFunction = () => {
+    const alfabeticOrderArr = arr.sort();
+    alfabeticOrderArr.forEach((skill, index) =>
+    result = `${result} 
+  
+    -${skill}`);
+    result = `${result}`
+    console.log(result);
+  }
+  secondFunction();
+
+  
