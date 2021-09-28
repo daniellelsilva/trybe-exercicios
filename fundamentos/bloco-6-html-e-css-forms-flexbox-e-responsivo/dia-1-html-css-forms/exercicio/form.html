@@ -18,58 +18,60 @@
         <fieldset>
           <div class="line-content">
             <label for="name">Nome: </label>
-            <input type="text" name="name" id="name" maxlength="40" required>
+            <input class="all-inputs" type="text" name="name" id="name" maxlength="40" required>
           </div>
           <div class="line-content">
             <label for="email">Endereço de e-mail: </label>
-            <input class="email-input" type="email" name="email" id="email" maxlength="50" required>
+            <input class="email-input all-inputs" type="email" name="email" id="email" maxlength="50" required>
           </div>
           <div class="line-content">
             <label for="cpf">CPF: </label>
-            <input type="text" name="cpf" id="cpf" maxlength="11" required>
+            <input class="all-inputs" type="text" name="cpf" id="cpf" maxlength="11" required>
           </div>
           <div class="line-content">
             <label for="address">Endereço: </label>
-            <input type="text" name="address" id="address" maxlength="200" required>
+            <input class="all-inputs" type="text" name="address" id="address" maxlength="200" required>
           </div>
           <div class="line-content">
             <label for="city">Cidade: </label>
-            <input type="text" name="city" id="city" maxlength="200" required>
+            <input class="all-inputs" type="text" name="city" id="city" maxlength="200" required>
           </div>
           <div class="line-content">
             <label for="state">Estado: </label>
-            <select name="state" id="state"  required>
+            <select class="all-inputs" name="state" id="state"  required>
             </select>
           </div>
           <div class="line-content">
             <label for="houseType">Tipo de imóvel: </label>
-            <input type="radio" name="houseType" id="house" value="house" required>
+            <input class="all-inputs" type="radio" name="houseType" id="house" value="Casa" required>
             <span>Casa</span>
-            <input type="radio" name="houseType" id="apartment" value="apartment" required>
+            <input class="all-inputs" type="radio" name="houseType" id="apartment" value="Apartamento" required>
             <span>Apartamento</span>
           </div>
         </fieldset>
         <fieldset>
           <div class="line-content">
             <label for="resume">Resumo do currículo: </label>
-            <textarea id="resume" name="resume" maxlength="1000" cols="100" rows="20" required></textarea>
+            <textarea class="all-inputs" id="resume" name="resume" maxlength="1000" cols="100" rows="20" required></textarea>
           </div>
           <div class="line-content">
             <label for="role">Cargo: </label>
-            <input type="text" name="role" id="role" maxlength="40" required>
+            <input class="all-inputs" type="text" name="role" id="role" maxlength="40" required>
           </div>
           <div class="line-content">
             <label for="roleDescription">Descrição do cargo: </label>
-            <input type="text" id="roleDescription" maxlength="500" name="roleDescription" required>
+            <input class="all-inputs" type="text" id="roleDescription" maxlength="500" name="roleDescription" required>
           </div>
           <div class="line-content">
             <label for="startDate">Data de início: </label>
-            <input type="text" class="input-data" name="startDate" value="" required>
+            <input type="text" class="input-data all-inputs" name="startDate" value="" required>
           </div>
         </fieldset>
         <button class="submit-button" type="submit">Enviar</button>
         <button class="clear-button" type="button">Limpar</button>
       </div>
+
+      <div id="divPai">Info usuário</div>
     </form>
   </main>
   <section class="form-data"></section>

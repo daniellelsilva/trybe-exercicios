@@ -93,13 +93,18 @@ function validateDate() {
   } 
 }
 
-// salva infor em divs
-// function saveDivs() {
-//   const inputs = document.querySelectorAll('input');
-//   for (let index = 0; index < inputs.length; index += 1) {
-//     if (inputs[index])
-//   }
-// }
+// Salva infos em div
+function saveInputs() {
+  let divFather = document.getElementById('divPai');
+  let allInputs = document.getElementsByClassName('all-inputs');
+  
+  for (let index = 0; index < allInputs.length; index += 1) {
+    let testando = allInputs[index]
+    let createDiv = document.createElement('div');
+    divFather.appendChild(createDiv);
+    createDiv.innerText = testando.value;
+  }
+}
 
 function submit(event) {
   event.preventDefault();
@@ -113,12 +118,25 @@ function submit(event) {
   validateRole();
   validateRoleDescription();
   validateDate();
+  saveInputs();
 }
 
+function clear(event) {
+
+  let allInputs = document.querySelectorAll('input');
+  for (let index = 0; index < allInputs.length; index += 1) {
+    let allInputsIndex = allInputs[index];
+    allInputsIndex.innerText = '';
+  }
+  
+}
 
 window.onload = function() {
   criaOptionEstados();
 
   let submitButton = document.querySelector('.submit-button');
   submitButton.addEventListener('click', submit);
+
+  let clerarButton = document.querySelector('.clear-button');
+  clerarButton.addEventListener('click', clear);
 }
