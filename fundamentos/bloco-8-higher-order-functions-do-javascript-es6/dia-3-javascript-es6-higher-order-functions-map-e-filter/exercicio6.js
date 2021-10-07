@@ -65,41 +65,13 @@ const books = [
 
 // Adicione o código do exercício aqui:
 const expectedResult = [
-  {
-    age: 31,
-    author: 'Isaac Asimov',
-  },
-  {
-    age: 38,
-    author: 'H. P. Lovecraft',
-  },
-  {
-    age: 39,
-    author: 'Stephen King',
-  },
-  {
-    age: 43,
-    author: 'George R. R. Martin',
-  },
-  {
-    age: 45,
-    author: 'Frank Herbert',
-  },
-  {
-    age: 62,
-    author: 'J. R. R. Tolkien',
-  },
+  'O Senhor dos Anéis',
+  'Fundação',
+  'O Chamado de Cthulhu',
 ];
 
-function nameAndAge() {
-  return books.map((book) => (
-     {
-      author: book.author.name,
-      age: book.releaseYear- book.author.birthYear
-      
-    }
-  )).sort((ageA, ageB) => ageA.age - ageB.age);
-};
-
-console.log(nameAndAge());
-assert.deepStrictEqual(nameAndAge(), expectedResult);
+function oldBooks() {
+  return books.filter((book) => (book.releaseYear < 1960)).map((book) => book.name);
+}
+console.log(oldBooks())
+assert.deepStrictEqual(oldBooks(), expectedResult);

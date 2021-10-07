@@ -66,40 +66,32 @@ const books = [
 // Adicione o código do exercício aqui:
 const expectedResult = [
   {
-    age: 31,
-    author: 'Isaac Asimov',
+    id: 6,
+    name: 'O Chamado de Cthulhu',
+    genre: 'Terror',
+    author: { name: 'H. P. Lovecraft', birthYear: 1890 },
+    releaseYear: 1928,
   },
   {
-    age: 38,
-    author: 'H. P. Lovecraft',
+    id: 3,
+    name: 'Fundação',
+    genre: 'Ficção Científica',
+    author: { name: 'Isaac Asimov', birthYear: 1920 },
+    releaseYear: 1951,
   },
   {
-    age: 39,
-    author: 'Stephen King',
-  },
-  {
-    age: 43,
-    author: 'George R. R. Martin',
-  },
-  {
-    age: 45,
-    author: 'Frank Herbert',
-  },
-  {
-    age: 62,
-    author: 'J. R. R. Tolkien',
+    id: 2,
+    name: 'O Senhor dos Anéis',
+    genre: 'Fantasia',
+    author: { name: 'J. R. R. Tolkien', birthYear: 1892 },
+    releaseYear: 1954,
   },
 ];
 
-function nameAndAge() {
-  return books.map((book) => (
-     {
-      author: book.author.name,
-      age: book.releaseYear- book.author.birthYear
-      
-    }
-  )).sort((ageA, ageB) => ageA.age - ageB.age);
-};
-
-console.log(nameAndAge());
-assert.deepStrictEqual(nameAndAge(), expectedResult);
+function oldBooksOrdered() {
+  // idade de lançamento de cada licro maior que 60anos
+  // ordenar da maior idade para menor
+  return books.filter((book) => (book.releaseYear <= 1960)).sort((bookA, bookB) => bookA.releaseYear - bookB.releaseYear);
+}
+console.log(oldBooksOrdered())
+assert.deepStrictEqual(oldBooksOrdered(), expectedResult);
