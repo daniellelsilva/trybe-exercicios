@@ -93,16 +93,25 @@ function validateDate() {
   } 
 }
 
+// Salva valor do radio
+function radioChecked() {
+const divFather = document.getElementById('divPai');
+const radioValue = document.querySelector('input[name="houseType"]:checked');
+const createDiv = document.createElement('div');
+divFather.appendChild(createDiv);
+createDiv.innerText = radioValue.value;
+};
+
 // Salva infos em div
 function saveInputs() {
   let divFather = document.getElementById('divPai');
   let allInputs = document.getElementsByClassName('all-inputs');
   
   for (let index = 0; index < allInputs.length; index += 1) {
-    let testando = allInputs[index]
+    let savingInputs = allInputs[index]
     let createDiv = document.createElement('div');
     divFather.appendChild(createDiv);
-    createDiv.innerText = testando.value;
+    createDiv.innerText = savingInputs.value;
   }
 }
 
@@ -119,16 +128,21 @@ function submit(event) {
   validateRoleDescription();
   validateDate();
   saveInputs();
+  radioChecked();
 }
 
-function clear(event) {
+function clear() {
+ let inputs = document.querySelectorAll('.clear-value');
 
-  let allInputs = document.querySelectorAll('input');
-  for (let index = 0; index < allInputs.length; index += 1) {
-    let allInputsIndex = allInputs[index];
-    allInputsIndex.innerText = '';
-  }
-  
+ for ( let index = 0; index < inputs.length; index += 1) {
+   let clearInputs = inputs[index];
+   clearInputs.value = '';
+ }
+}
+
+function clearRadio() {
+  document.getElementById("house").checked = false;
+  document.getElementById("apartment").checked = false;
 }
 
 window.onload = function() {
@@ -137,6 +151,9 @@ window.onload = function() {
   let submitButton = document.querySelector('.submit-button');
   submitButton.addEventListener('click', submit);
 
-  let clerarButton = document.querySelector('.clear-button');
-  clerarButton.addEventListener('click', clear);
+  let clearButton = document.querySelector('.clear-button');
+  clearButton.addEventListener('click', clear);
+
+  let clearButton2 = document.querySelector('.clear-button');
+  clearButton2.addEventListener('click', clearRadio);
 }
