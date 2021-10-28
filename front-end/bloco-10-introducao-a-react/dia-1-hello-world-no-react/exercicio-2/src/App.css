@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.title {
+  color: rgb(52, 160, 164);
+  margin: 20px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.card {
+  margin: 8px 0;
+  text-align: center;
+}
+
+.footer {
+  color: rgb(30, 96, 145);
+  text-align: center;
+}
