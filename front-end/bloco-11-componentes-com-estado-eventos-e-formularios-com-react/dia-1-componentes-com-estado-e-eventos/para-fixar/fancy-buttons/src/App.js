@@ -1,14 +1,27 @@
 import React from 'react';
 import './App.css';
 
-function handleClick() {
-  console.log('clicou!')
+function handleClick1() {
+  console.log('Botão 1!');
+}
+
+function handleClick2() {
+  console.log('Botão 2!');
+}
+
+function handleClick3() {
+  console.log('Botão 3!');
 }
 
 class App extends React.Component {
   render() {
-    return <button onClick={handleClick}>Botão</button>
-  }
+    return (
+    <div>
+      <button onClick={handleClick1}>Botão 1</button>
+      <button onClick={handleClick2}>Botão 2</button>
+      <button onClick={handleClick3}>Botão 3</button>
+    </div>
+    )}
 }
 
 export default App;
