@@ -18,28 +18,28 @@ class App extends React.Component {
   }
 
   handleClick1 = () => {
-    this.setState(() => ({
-      cliquesBotao1: 1,
+    this.setState((estadoAnterior, _props) => ({
+      cliquesBotao1: estadoAnterior.cliquesBotao1 + 1
     }))
 }
 
 handleClick2 = () => {
-  this.setState(() => ({
-    cliquesBotao2: 1,
+  this.setState((estadoAnterior, _props) => ({
+    cliquesBotao2: estadoAnterior.cliquesBotao2 + 1
   }))
 }
 
 handleClick3 = () => {
-  this.setState(() => ({
-    cliquesBotao3: 1,
+  this.setState((estadoAnterior, _props) => ({
+    cliquesBotao3: estadoAnterior.cliquesBotao3 + 1
   }))
 }
   render() {
     return (
     <div>
-      <button onClick={ this.handleClick1 }>Botão 1</button>
-      <button onClick={ this.handleClick2 }>Botão 2</button>
-      <button onClick={ this.handleClick3 }>Botão 3</button>
+      <button onClick={ this.handleClick1 }>Botão 1 | Count = {this.state.cliquesBotao1}</button>
+      <button onClick={ this.handleClick2 }>Botão 2 | Count = {this.state.cliquesBotao2}</button>
+      <button onClick={ this.handleClick3 }>Botão 3 | Count = {this.state.cliquesBotao3}</button>
     </div>
     )}
 }
